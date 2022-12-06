@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { CartService } from './cart.service';
 
-const url = 'http://localhost:3000'
+const url = 'https://json-server-blush-nine.vercel.app'
 @Injectable({
   providedIn: 'root'
 })

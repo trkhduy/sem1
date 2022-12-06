@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-const urlApiBlog = "http://localhost:3000"
+const urlApiBlog = "https://json-server-blush-nine.vercel.app"
 
 @Injectable({
   providedIn: 'root'
