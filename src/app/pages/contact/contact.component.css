@@ -1,0 +1,138 @@
+main {
+    font-family: Habibi;
+}
+
+.map {
+    width: 100%;
+    height: 400px;
+}
+
+p {
+    font-size: medium;
+    color: #a8a8a8;
+}
+
+.banner {
+    background-image: url(https://cdn.shopify.com/s/files/1/0301/5648/8842/files/breadcrumb.jpg?v=1579081409);
+    /* height: 310px; */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.container-v2 {
+    max-width: 1430px;
+}
+
+.banner .title-page h2 {
+    display: inline-block;
+    font-size: 60px;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace !important;
+    color: #fff;
+}
+
+/* .banner .container-v2  .title-page h2 {
+    font-family: Habibi;
+    font-size: 60px;
+    font-weight: 300;
+    color: #fff;
+    position: relative;
+} */
+/* .banner .container-v2  .title-page h2::before {
+    content: "";
+    height: 2px;
+    width: 74px;
+    position: absolute;
+    left: 50%;
+    bottom: -15%;
+    transform: translate(-50%);
+    background: #ffffff;
+} */
+/* .page {
+    padding: 30px 0;
+} */
+.page a,
+strong {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Habibi;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.page a i {
+    padding: 0 10px;
+}
+
+.gg-map {
+    padding: 0 100px;
+}
+
+.content {
+    padding: 50px 0 60px;
+}
+
+.content .title_desc {
+    font-size: 40px;
+    color: #000;
+    text-align: center;
+    font-family: Habibi;
+    font-weight: 400;
+}
+
+.form {
+    padding: 0 0 30px 0;
+}
+
+.form-group {
+    padding-bottom: 20px;
+}
+
+.form-control {
+    border: none;
+    border: 1px solid #c5c5c5;
+    padding: 10px;
+    border-radius: 0;
+}
+
+.nut {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0;
+}
+
+.chu {
+    color: #be9667;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 750;
+}
+
+@media (max-width: 500px) {
+    .banner {
+        padding: 50px 0;
+    }
+
+    .banner .container-v2 .title-page h2 {
+        font-size: 45px;
+    }
+
+    .page a,
+    strong {
+        font-size: 11px;
+    }
+
+    .content .title_desc {
+        font-size: 20px;
+    }
+
+    .gg-map {
+        padding: 0 15px;
+    }
+}

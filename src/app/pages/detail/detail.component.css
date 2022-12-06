@@ -1,0 +1,297 @@
+/* .banner {
+    color: #fff;
+    background-image: url('https://cdn.shopify.com/s/files/1/0301/5648/8842/files/breadcrumb.jpg?v=1579081409');
+    padding: 100px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.banner h1 {
+    border-bottom: 3px solid #fff;
+    display: inline-block;
+} */
+.banner {
+    background-image: url(https://cdn.shopify.com/s/files/1/0301/5648/8842/files/breadcrumb.jpg?v=1579081409);
+    height: 310px;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+.container-v2 {
+    max-width: 1430px;
+}
+.banner .title-page h2{
+    display: inline-block;
+    font-size: 60px;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace !important;
+    color: #fff;
+}
+
+.page a, strong {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Habibi;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: transparent;
+}
+.page a i{
+    padding: 0 10px;
+}
+
+.container_custom {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 80px;
+}
+
+.evaluate i {
+    color: yellow;
+    padding-right: 5px;
+}
+
+.evaluate p {
+    font-size: 10px;
+}
+
+.name_fastfood h1 {
+    font-size: 45px;
+    font-family: cursive;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.infor_product {
+    border-bottom: 1px solid #9898986d;
+    padding-bottom: 10px;
+}
+
+.price span {
+    color: #808080;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.describe_product {
+    color: #808080;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+}
+
+select {
+    width: 20%;
+    padding: 5px 0 5px 5px;
+}
+
+.size h5 {
+    margin: 0;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.size span {
+    padding: 10px 12px;
+    background-color: #dedede;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.size span:hover {
+    background-color: #ea8025;
+    color: #fff;
+    transition: .3s;
+}
+
+.addCart {
+    width: 40%;
+}
+
+.addCart button {
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #111;
+    color: #fff;
+    width: 100%;
+    padding: 13px 0;
+    transition: .4s;
+    border: none;
+}
+
+.addCart button:hover {
+    background-color: #5f8e3e;
+    transition: .4s;
+}
+
+.add_information {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add_information p {
+    margin: 0 50px;
+    color: #111;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.add_info_title {
+    position: relative;
+}
+
+.add_info_title::after {
+    content: "";
+    position: absolute;
+    height: 1.5px;
+    background-color: #111;
+    width: 40%;
+    bottom: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.buy a {
+    text-decoration: none;
+    font-weight: 700;
+    border: 4px solid #111;
+    padding: 10px 30px;
+    color: #111;
+}
+
+.buyNow {
+    padding: 50px 0px;
+    background-color: #98989822;
+}
+
+.product_add img {
+    object-fit: cover;
+}
+
+.latest_pro p {
+    color: #111;
+    font-weight: 500;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+.input button {
+    width: 45px;
+    padding: 7px;
+    border: none;
+    border: 1px solid #111;
+    border-radius: 0;
+    font-size: 17px;
+}
+
+.input input {
+    width: 45px;
+    padding: 7px;
+    border: none;
+    margin: 0 10px;
+    text-align: center;
+    border-bottom: 1px solid #111;
+}
+
+
+.input .left_ip {
+    margin-right: -3px;
+}
+
+.input .right_ip {
+    margin-left: -3px;
+}
+
+@media screen and (max-width:2560px) {
+    .window_768 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:991.5px) {
+    .container_custom {
+        padding: 0 30px;
+    }
+
+    .banner {
+        padding: 70px 0px;
+    }
+
+    .detail_info_pro {
+        align-items: flex-start;
+    }
+
+    select {
+        width: 35%;
+    }
+
+    .w_768 {
+        margin-top: 0 !important;
+    }
+
+    .window_768 {
+        display: block;
+    }
+
+    .name_fastfood h1 {
+        font-size: 30px;
+    }
+
+    .size h5 {
+        font-size: 18px;
+    }
+
+    .describe_product {
+        font-size: 15px;
+    }
+
+    .add_information p {
+        font-size: 16px;
+    }
+
+    .add_information p:first-child,
+    p:last-child {
+        display: none;
+    }
+
+}
+
+.list_product {
+    padding: 0 10px;
+}
+
+.more_item {
+    position: relative;
+}
+
+@media screen and (max-width:575.5px) {
+    .window_768 {
+        display: none;
+    }
+
+    .size_detail {
+        margin-top: 20px;
+    }
+
+    select {
+        width: 40%;
+    }
+
+    .container_custom {
+        padding: 0 20px;
+    }
+
+    .opt {
+        margin-top: 30px;
+    }
+
+}

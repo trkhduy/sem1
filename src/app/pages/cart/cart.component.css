@@ -1,0 +1,392 @@
+.banner {
+    background-image: url('https://cdn.shopify.com/s/files/1/0301/5648/8842/files/breadcrumb.jpg?v=1579081409');
+    /* height: 310px; */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    text-align: center;
+}
+.banner h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace !important;
+    color: #fff;
+}
+
+.container-v2 {
+    max-width: 1430px;
+}
+
+.banner .container-v2 .title-page h2 {
+    font-family: Habibi;
+    font-size: 60px;
+    font-weight: 300;
+    color: #fff;
+    position: relative;
+}
+
+/* .banner .container-v2 .title-page h2::before {
+    content: "";
+    height: 2px;
+    width: 74px;
+    position: absolute;
+    left: 50%;
+    bottom: -15%;
+    transform: translate(-50%);
+    background: #ffffff;
+} */
+
+.page {
+    padding: 30px 0;
+}
+
+.page a,
+strong {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Habibi;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.page a i {
+    padding: 0 10px;
+}
+
+
+.title_top {
+    border: 1px solid #cbced1;
+}
+
+.title_cart {
+    padding: 20px 0;
+}
+
+.title_cart h4 {
+    font-size: 18px;
+    margin: 0;
+    padding: 0 15px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.content_cart {
+    padding: 15px;
+}
+
+.content_cart img {
+    margin-right: 20px;
+}
+
+.content_cart h5 {
+    margin-bottom: 0;
+}
+
+.content_cart h5 i {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.title_tops {
+    border: 1px solid #cbced1;
+}
+
+.list_products {
+    border-top: none;
+}
+
+.title_tops input {
+    width: 70px;
+    height: 50px;
+}
+
+.amount {
+    display: flex;
+    align-items: center;
+}
+
+.amount input {
+    padding: 0;
+}
+
+.updateCart {
+    display: flex;
+    align-items: center;
+}
+
+.update {
+    width: 25%;
+}
+
+.update button {
+    background-color: #111;
+    color: #fff;
+    padding: 15px 0px;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+    letter-spacing: 1.5px;
+}
+
+.update:hover button {
+    background-color: #f0002f;
+    transition: 0.5s;
+}
+
+.continue {
+    width: 30%;
+    margin-left: 100px;
+}
+
+.continue button {
+    width: 100%;
+    background-color: #ea8025;
+    color: #fff;
+    padding: 15px 0px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+}
+
+.continue:hover button {
+    background-color: #5f8e3e;
+    transition: 0.5s;
+}
+
+/* .continue {
+    text-align: right;
+} */
+
+.cart_total h5 {
+    border-bottom: 1.5px solid #cbced1;
+    padding: 15px 0;
+    font-size: 18px;
+    margin: 0;
+    letter-spacing: 1.5px;
+}
+
+.proceed button {
+    background-color: #ea8025;
+    color: #fff;
+    padding: 15px 0px;
+    width: 100%;
+    font-weight: 700;
+    border: none;
+    letter-spacing: 1.5px;
+    transition: .5s;
+}
+
+.proceed:hover button {
+    background-color: #5f8e3e;
+    transition: .5s;
+}
+
+.end_cart {
+    border: 1px solid #cbced1;
+    padding: 30px;
+}
+
+.total_price h6 {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.proceed {
+    width: 35%;
+}
+
+/*cong tru*/
+.input button {
+    width: 45px;
+    padding: 7px;
+    border: none;
+    border: 1px solid #111;
+    border-radius: 0;
+    font-size: 17px;
+}
+
+.input input {
+    width: 45px;
+    padding: 7px;
+    border: none;
+    margin: 0 10px;
+    text-align: center;
+    border-bottom: 1px solid #111;
+}
+
+
+.input .left_ip {
+    margin-right: -3px;
+}
+
+.input .right_ip {
+    margin-left: -3px;
+}
+
+/*cart_768*/
+.list_cart {
+    border: 1px solid #cbced1;
+    padding: 25px 20px;
+}
+
+.item_title h5 {
+    color: #ea8025;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.item_title span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.item_title img {
+    margin-right: 20px;
+}
+
+.remove {
+    text-align: center;
+}
+
+.remove i {
+    font-size: 30px;
+}
+
+.list_cart_768 {
+    display: none;
+}
+
+@media screen and (max-width:991.5px) {
+    .title_cart h4 {
+        font-size: 16px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .container_custom {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .content_cart {
+        padding: 15px 7px;
+    }
+
+    .content_cart h5 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .content_cart img {
+        margin-right: 10px;
+        width: 90px !important;
+        height: 90px !important;
+    }
+
+    .input {
+        text-align: center;
+    }
+
+    .input button {
+        width: 40px;
+    }
+
+    .input input {
+        width: 32px;
+    }
+
+    .id_cart {
+        margin-left: 15px;
+    }
+
+    .product_name_content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .update {
+        width: 30%;
+    }
+
+    .continue {
+        width: 35%;
+    }
+
+    .proceed {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:767.5px) {
+    .container_custom {
+        padding: 0 30px;
+    }
+
+    .list_cart_1024 {
+        display: none;
+    }
+
+    .list_cart_768 {
+        display: block;
+    }
+
+    .update {
+        width: 35%;
+        font-size: 13px;
+    }
+
+    .continue {
+        width: 40%;
+        font-size: 13px;
+        margin-left: 50px;
+    }
+
+    .proceed {
+        width: 45%;
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width:575.5px) {
+    .item_title h5 {
+        font-size: 15px;
+    }
+
+    .container_custom {
+        padding: 0 10px;
+    }
+
+    .list_cart {
+        padding: 25px 10px;
+    }
+}
+
+@media screen and (max-width:491px) {
+    .update {
+        width: 40%;
+        font-size: 12px;
+    }
+
+    .continue {
+        width: 60%;
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    .proceed {
+        width: 80%;
+        font-size: 12px;
+    }
+}

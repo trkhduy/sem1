@@ -1,0 +1,179 @@
+<app-header></app-header>
+<main>
+    <div class="banner">
+        <div class="container container-v2">
+            <div class="title-page">
+                <h2>Blogs</h2>
+            </div>
+            <div class="page">
+                <a href="/">home <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <strong>Blogs</strong>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4" style="position: relative;">
+        <div class="row">
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <div class="blog" *ngFor="let item of blog">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="image_blog">
+                                <img src="{{item.image}}" class="card-img" height="200px" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9">
+                            <div class="content_blog ">
+                                <div class="title_blog">
+                                    <h2>{{item.name}}</h2>
+                                </div>
+                                <div class="data_blog d-flex  align-items-center justify-content-between">
+                                    <h6 class="mt-3 mb-3">{{item.time}}</h6>
+                                    <div class="author d-flex align-items-center ">
+                                        <img src="{{item.author_img}}" width="30px" height="30px" alt="">
+                                        <p class="m-0">{{item.author}}</p>
+                                    </div>
+                                </div>
+                                <div class="describe">
+                                    <p class="m-0">{{item.description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="next_blog mt-3 mb-3">
+                    <div class="number_page d-flex justify-content-center">
+                        <div class="number_one" *ngFor="let item of numberPage"
+                            [class.active_change_page]="pages == item" (click)="Pages(item)">{{item}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 top-0" id="blogs" style="right:0;">
+                <h2 class="title_ pr-3">Recent Blogs</h2>
+                <div class="blog1">
+                    <div class="row ">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="image_blog">
+                                <img src="https://cdn.shopify.com/s/files/1/0414/0069/6999/files/instagram3.jpg?v=1233786014105632074"
+                                    height="100%" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-9 p col-md-9 col-sm-9">
+                            <div class="content_blog ">
+                                <div class="title_blog">
+                                    <h6>Milatino is a London based jewellery brand. Each piece in our collection </h6>
+                                </div>
+                                <div class="describe">
+                                    <p class="m-0">By: D.V.H</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog1">
+                    <div class="row ">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="image_blog">
+                                <img src="https://cdn.shopify.com/s/files/1/0414/0069/6999/files/instagram8.jpg?v=7071610955878302932"
+                                    height="100%" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-9 p col-md-9 col-sm-9">
+                            <div class="content_blog ">
+                                <div class="title_blog">
+                                    <h6>Milatino is a London based jewellery brand. Each piece in our collection </h6>
+                                </div>
+                                <div class="describe">
+                                    <p class="m-0">By: D.V.H</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog1">
+                    <div class="row ">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="image_blog">
+                                <img src="https://cdn.shopify.com/s/files/1/0414/0069/6999/files/instagram7.jpg?v=8586200102971758933"
+                                    height="100%" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-9 p col-md-9 col-sm-9">
+                            <div class="content_blog ">
+                                <div class="title_blog">
+                                    <h6>Milatino is a London based jewellery brand. Each piece in our collection </h6>
+                                </div>
+                                <div class="describe">
+                                    <p class="m-0">By: D.V.H</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="title_ pr-3">Recent Blogs</h2>
+                <div class="blog1">
+                    <div class="row ">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="image_blog">
+                                <img src="https://cdn.shopify.com/s/files/1/0414/0069/6999/files/instagram3.jpg?v=1233786014105632074"
+                                    height="100%" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-9 p col-md-9 col-sm-9">
+                            <div class="content_blog ">
+                                <div class="title_blog">
+                                    <h6>Milatino is a London based jewellery brand. Each piece in our collection </h6>
+                                </div>
+                                <div class="describe">
+                                    <p class="m-0">By: D.V.H</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog1">
+                    <div class="row ">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="image_blog">
+                                <img src="https://cdn.shopify.com/s/files/1/0414/0069/6999/files/instagram8.jpg?v=7071610955878302932"
+                                    height="100%" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-9 p col-md-9 col-sm-9">
+                            <div class="content_blog ">
+                                <div class="title_blog">
+                                    <h6>Milatino is a London based jewellery brand. Each piece in our collection </h6>
+                                </div>
+                                <div class="describe">
+                                    <p class="m-0">By: D.V.H</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog1">
+                    <div class="row ">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="image_blog">
+                                <img src="https://cdn.shopify.com/s/files/1/0414/0069/6999/files/instagram7.jpg?v=8586200102971758933"
+                                    height="100%" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-9 p col-md-9 col-sm-9">
+                            <div class="content_blog ">
+                                <div class="title_blog">
+                                    <h6>Milatino is a London based jewellery brand. Each piece in our collection </h6>
+                                </div>
+                                <div class="describe">
+                                    <p class="m-0">By: D.V.H</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<app-footer></app-footer>

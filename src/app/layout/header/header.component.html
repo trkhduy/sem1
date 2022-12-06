@@ -1,0 +1,186 @@
+<body class="fixed_">
+    <div class="position-fixed w-100 " style="z-index: 1000;">
+        <header class="container_custom header_main">
+            <div class="header">
+                <div class="menu">
+                    <ul>
+                        <li><a routerLink="/">Home</a></li>
+                        <li class="menu_lv2_food"><a routerLink="/shop">MenuFood </a>
+                            <div class="menu_FoodLv2">
+                                <div class="row">
+                                    <div class="col-lg-6 menu_food" style="cursor: pointer;"
+                                        *ngFor="let item of cate_main">
+                                        <p routerLink="/filter/{{item.id}}">{{item.name}}</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-lg-6">
+                                        <div class="category_food">
+                                            <p *ngFor="let item of cate_food" routerLink="/filter/{{item.id}}">
+                                                {{item.name}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="category_food">
+                                            <p *ngFor="let item of cate_beverage" routerLink="/filter/{{item.id}}">
+                                                {{item.name}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="combo mt-3 menu_combo" *ngFor="let item of cate_combo">
+                                    <p routerLink="/filter/{{item.id}}">{{item.name}}</p>
+                                    <i class="fa-solid fa-fire"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a routerLink="/blog">Blog</a></li>
+                        <li class="menu_lv2_about"><a routerLink="/about">About </a>
+                            <div class="menu_AboutLv2">
+                                <p>About 1</p>
+                                <p>About 2</p>
+                                <p>About 3</p>
+                            </div>
+                        </li>
+                        <li><a routerLink="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <div class="player-tile__number">
+                        <p routerLink="/">Hichoacau!</p>
+                    </div>
+                </div>
+                <div class="menu_right">
+                    <a href=""><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a>
+                    <a href="" routerLink="/login" *ngIf="!user"><i class="fa-regular fa-user"></i></a>
+                    <div *ngIf="user" class="img_user">
+                        <img src="https://media.deponline.info/images/d365/fashionista-thai-voi-luong-nguoi-theo-doi-khung-tren-instagram/fashionista-thai-voi-luong-nguoi-theo-doi-khung-tren-instagram_5ed13922-702f-4429-b267-66bfd7f505b0.jpeg"
+                            alt="" class="img_customer">
+                        <div class="log_out">
+                            <div class="info_person mb-4">
+                                <img src="https://media.deponline.info/images/d365/fashionista-thai-voi-luong-nguoi-theo-doi-khung-tren-instagram/fashionista-thai-voi-luong-nguoi-theo-doi-khung-tren-instagram_5ed13922-702f-4429-b267-66bfd7f505b0.jpeg"
+                                    alt="" class="img_info_customer">
+                                <span>{{user.name}}</span>
+                            </div>
+                            <button class="sign_out" (click)="sign_out()">Sign out</button>
+                            <button class="mt-4 another" (click)="another_acc()">Use another account</button>
+                        </div>
+                    </div>
+                    <div class="your_cart">
+                        <a routerLink="/cart"><i class="fa-solid fa-bag-shopping "></i></a>
+                        <div class="cart_home">
+                            <span *ngIf="!user">0</span>
+                            <span *ngIf="user">{{quantity_item}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--1024px-->
+        <div class="header_1024 container_custom_1024">
+            <div class="header_content_1024">
+                <div class="bars">
+                    <i class="fa-solid fa-bars" (click)="onNav()" id="bars"></i>
+                </div>
+                <div class="logo_1024">
+                    <div class="player-tile__number_1024">
+                        <p routerLink="/">Hichoacau!</p>
+                    </div>
+                </div>
+                <div class="menu_right_1024">
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <div class="your_cart">
+                        <a routerLink="/cart"><i class="fa-solid fa-bag-shopping "></i></a>
+                        <div class="cart_home">
+                            <span *ngIf="!user">0</span>
+                            <span *ngIf="user">{{quantity_item}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--nav-on-->
+        <div class="bg-1024" id="nav_1024">
+            <div class="box_contentmenu" id="box_contentmenu">
+                <div class="nav-main-1024">
+                    <div class="nav-1024">
+                        <div class="nav-header-1024">
+                            <div class="account" *ngIf="!user">
+                                <a href=""><i class="fa-regular fa-user"></i></a>
+                                <span>ACCOUNT</span>
+                            </div>
+                            <div class="user" *ngIf="user">
+                                <img src="https://media.deponline.info/images/d365/fashionista-thai-voi-luong-nguoi-theo-doi-khung-tren-instagram/fashionista-thai-voi-luong-nguoi-theo-doi-khung-tren-instagram_5ed13922-702f-4429-b267-66bfd7f505b0.jpeg"
+                                    alt="">
+                                <span>{{user.name}}</span>
+                            </div>
+                            <div class="close_1024">
+                                <span>INT / $</span>
+                                <i class="fa-solid fa-xmark" (click)="closeNav()"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_1024 mt-2">
+                        <div class="menu_content">
+                            <a routerLink="/">HOME</a>
+                            <div class="menu_multi">
+                                <div class="menu_1024_multi">
+                                    <a routerLink="/shop">MENUFOOD</a>
+                                    <i class="fa-solid fa-angle-right" (click)="onMenu()" id="menuFood_icon"></i>
+                                </div>
+                                <div class="menuFood_1024" id="menuFood_1024">
+                                    <div class="food_1024">
+                                        <h5 *ngFor="let item of catebyid1" routerLink="/filter/{{item.id}}">
+                                            {{item.name}}
+                                        </h5>
+                                        <p *ngFor="let item of cate_food" routerLink="/filter/{{item.id}}">{{item.name}}
+                                        </p>
+                                    </div>
+                                    <div class="food_1024">
+                                        <h5 *ngFor="let item of catebyid2" routerLink="/filter/{{item.id}}">
+                                            {{item.name}}
+                                        </h5>
+                                        <p *ngFor="let item of cate_beverage" routerLink="/filter/{{item.id}}">
+                                            {{item.name}}
+                                        </p>
+                                        <p>Fruit juice</p>
+                                        <p>Soft drink</p>
+                                        <p>Tea</p>
+                                    </div>
+                                    <div class="combo_1024" *ngFor="let item of cate_combo"
+                                        routerLink="/filter/{{item.id}}">
+                                        <h5>COMBO</h5>
+                                        <i class="fa-solid fa-fire"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <a routerLink="/blog">BLOG</a>
+                            <div class="menu_multi">
+                                <div class="menu_1024_multi">
+                                    <a routerLink="/about">ABOUT</a>
+                                    <i class="fa-solid fa-angle-right" (click)="onAbout()" id="about_icon"></i>
+                                </div>
+                                <div class="about_1024" id="about_1024">
+                                    <div class="food_1024">
+                                        <p>About 1</p>
+                                        <p>About 2</p>
+                                        <p>About 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a routerLink="/contact">CONTACT</a>
+                        </div>
+                    </div>
+                    <div class="logout" *ngIf="!user">
+                        <span routerLink="/login">LOG IN</span>
+                    </div>
+                    <div class="logout" *ngIf="user">
+                        <span (click)="sign_out()">LOG OUT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

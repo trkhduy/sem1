@@ -1,0 +1,87 @@
+<!-- contact -->
+<app-header></app-header>
+<main>
+    <div class="banner">
+        <div class="container container-v2">
+            <div class="title-page">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="page">
+                <a href="/">home <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <strong>Contact us</strong>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h3 class="title_desc">
+            Contact Us To Find Out More Or How <br> We Can Help You Better.
+        </h3>
+    </div>
+    <div class="gg-map">
+        <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.6586636417455!2d105.78131221485465!3d21.046339485988824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab32dd670b87%3A0x5584fc13c4f1f6d5!2zMjUwIEhvw6BuZyBRdeG7kWMgVmnhu4d0LCBD4buVIE5odeG6vywgQ-G6p3UgR2nhuqV5LCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1661519935099!5m2!1svi!2s"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="container" style="padding-top: 50px ;">
+        <div class="row">
+            <div class="col-lg-6" style="padding-right: 100px">
+                <h4>Hichoacau!</h4>
+                <p>250 Hoàng Quốc Việt, Cổ Nhuế, Cầu Giấy, Hà Nội <br>P: 804.355.4383 F: 804.367.7901</p>
+                <h4>Store Hours</h4>
+                <p>Monday-Saturday 11am-7pm ET <br> Sunday 11am-6pm ET</p>
+                <h4>Specialist Hours</h4>
+                <p> Sunday 11am-6pm ET</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="form">
+                    <form [formGroup]="formData" (ngSubmit)="submitForm()">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" formControlName="userName" placeholder="Your Name (Required)">
+                            <div *ngIf="form.userName.invalid && (form.userName.dirty || form.userName.touched)">
+                                <div *ngIf="form.userName.errors?.['required']">
+                                    <small class="form-text text-danger">Please specify your name</small>
+                                </div>
+                                <div *ngIf="form.userName.errors?.['minlength']">
+                                    <small class="form-text text-danger">The minimum is 3 characters</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email" name="email" formControlName="email" placeholder="Your Email (Required)">
+                            <div *ngIf="form.email.invalid && (form.email.dirty || form.email.touched)">
+                                <div *ngIf="form.email.errors?.['required']">
+                                    <small class="form-text text-danger">Please specify your email</small>
+                                </div>
+                                <div *ngIf="form.email.errors?.['email']">
+                                    <small class="form-text text-danger">Incorrect email format</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" name="subject" formControlName="subject" placeholder="Subject">
+                            <div *ngIf="form.subject.invalid && (form.subject.dirty || form.subject.touched)">
+                                <div *ngIf="form.subject.errors?.['required']">
+                                    <small class="form-text text-danger">Please enter your subject</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="text" id="" cols="20" rows="5" class="form-control" formControlName="message" placeholder="Your Message"></textarea>
+                            <div *ngIf="form.message.invalid && (form.message.dirty || form.message.touched)">
+                                <div *ngIf="form.message.errors?.['required']">
+                                    <small class="form-text text-danger">Enter your message</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nut1">
+                            <input class="btn btn-dark nut" type="submit" value="SEND TO US">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

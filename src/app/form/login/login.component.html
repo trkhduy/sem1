@@ -1,0 +1,90 @@
+<div style="height: 100vh; min-height: 700px; ">
+    <div class="form_login">
+        <div class="container ">
+            <div class="col-lg-6">
+                <div class="logo mt-5 mb-5 text-center">
+
+                </div>
+                <div class="form">
+                    <h4 class="mt-3 mb-3 text-light">Login into your account</h4>
+                    <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+                        <div class="form-group mb-3">
+                            <input type="email" class="form-control" placeholder="Email......." formControlName="email">
+                            <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="text-danger">
+                                <div *ngIf="f.email.errors?.['required']">
+                                    <small>Email is required.</small>
+                                </div>
+                                <div *ngIf="f.email.errors?.['email']">
+                                    <small>Please supply a valid email address</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3 pass">
+                            <input type="password" class="form-control " placeholder="Password......"
+                                formControlName="password" id="pass">
+                            <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)"
+                                class="text-danger">
+                                <div *ngIf="f.password.errors?.['required']">
+                                    <small>Password is required.</small>
+                                </div>
+                                <div *ngIf="f.password.errors?.['minlength']">
+                                    <small>Please supply a valid password address</small>
+                                </div>
+                            </div>
+                            <div class="show">
+                                <i class="fa-solid fa-eye" id="eye_" (click)="showPas()"></i>
+                            </div>
+                        </div>
+
+
+                        <div class="d-flex justify-content-between">
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label text-light" for="exampleCheck1">Keep me logged in</label>
+                            </div>
+                            <div>
+                                <a href="" style="color: #fff;">Forgot Password</a>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success login mt-3 mb-3">Sign In</button>
+                        <h4 class="login_width text-center mb-5 mt-3">
+                            <span>Or Login With</span>
+                        </h4>
+                        <div class="socials row">
+                            <div class="col-lg-4 icon-socials col-md-4 col-xs-4">
+                                <div class="icon">
+                                    <a href=""><i class="fa-brands fa-google-plus-g"></i></a>
+                                </div>
+                                <div class="icon_name">
+                                    <span>Google+</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 icon-socials col-md-4 justify-content-center col-xs-4">
+                                <div class="icon1">
+                                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                </div>
+                                <div class="icon_name1" style="text-align: center;">
+                                    <span class="">Twitter</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 icon-socials col-md-4 justify-content-end col-xs-4">
+                                <div class="icon2">
+                                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                </div>
+                                <div class="icon_name2" style=" width: 86.73px;">
+                                    <span>Facebook</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 100px;">
+                            <p class="text-light text-center mb-3 mt-3">Don't have an account? <a href=""
+                                    style="color: #fff;" routerLink="/register">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

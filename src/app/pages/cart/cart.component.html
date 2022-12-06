@@ -1,0 +1,167 @@
+<app-header></app-header>
+<div>
+    <!-- <div class="banner text-center">
+        <h1 class="m-0">CART</h1>
+        <h4>Home <i class="fa-solid fa-chevron-right"></i> Cart</h4> -->
+    <div class="banner">
+        <div class="container container-v2">
+            <div class="title-page">
+                <h2 class="m-0">Your Cart</h2>
+            </div>
+            <div class="page">
+                <a href="/">home <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <strong>Your Cart</strong>
+            </div>
+        </div>
+    </div>
+    <div class="list_cart_1024">
+        <div class="list-cart-top mt-5">
+            <div class="container container_custom ">
+                <div class="row d-flex justify-content-between ">
+                    <div class="row title_top col-lg-12 col-md-12 col-sm-6" style="color: #ea8025; ">
+                        <div class="col-lg-2 col-md-1 col-sm-12 title_cart">
+                            <h4>ID</h4>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 title_cart">
+                            <h4>PRODUCT NAME</h4>
+                        </div>
+                        <div class="col-lg-6 col-md-7 col-sm-12 row title_cart title_top_576">
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <h4>PRICE</h4>
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-12">
+                                <h4>QUANTITY</h4>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <h4>TOTAL</h4>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-12">
+                                <h4></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row title_tops list_products col-lg-12 col-md-12 col-sm-6"
+                        *ngFor="let item of cartPro, let i = index">
+                        <div class="col-lg-2 d-flex align-items-center col-md-1 col-sm-12 content_cart">
+                            <h5 class="id_cart">{{i+1}}</h5>
+                        </div>
+                        <div
+                            class="col-lg-4 d-flex align-items-center content_cart product_name_content col-md-4 col-sm-12">
+                            <img src="{{item.image}}" alt="" width="100px" height="100px">
+                            <h5 class="ml-3">{{item.name}} ({{item.size}})</h5>
+                        </div>
+                        <div class="col-lg-6 col-md-7 col-sm-12 row align-items-center ">
+                            <div class="col-lg-3 col-md-3 content_cart col-sm-12">
+                                <h5>$ {{item.price}}</h5>
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-12">
+                                <div class="input ml-3">
+                                    <button class="btn-fake btn left_ip" (click)="mark('-',item.id)" id="tru"><i
+                                            class="fa-solid fa-minus"></i></button>
+                                    <input type="text" value="{{item.quantity}}" id="quantity{{item.id}}">
+                                    <button class="btn-fake btn right_ip" (click)="mark('+',item.id)" id="cong"><i
+                                            class="fa-solid fa-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 content_cart col-sm-12">
+                                <h5>$ {{item.totalEachitem}}</h5>
+                            </div>
+                            <div class="col-lg-1 col-md-1 content_cart col-sm-12">
+                                <h5 (click)="removePro(item.id)"><i class="fa-solid fa-xmark"></i></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- list_cart_768 -->
+    <div class="list_cart_768 container_custom mt-5" *ngFor="let item of cartPro">
+        <div class="list_cart">
+            <div class="row d-flex align-items-center item_title">
+                <div class="col-sm-6 col-4">
+                    <h5>ID</h5>
+                </div>
+                <div class="col-sm-6 col-8 text-center">
+                    <span>{{item.id}}</span>
+                </div>
+            </div>
+            <div class="row mt-4 d-flex align-items-center item_title">
+                <div class="col-sm-6 col-4">
+                    <h5>PRODUCT NAME</h5>
+                </div>
+                <div class="col-sm-6 col-8 d-flex align-items-center justify-content-center">
+                    <img src="{{item.image}}" alt="" width="80px" height="80px">
+                    <span>{{item.name}} ({{item.size}})</span>
+                </div>
+            </div>
+            <div class="row mt-4 d-flex align-items-center item_title">
+                <div class="col-sm-6 col-4">
+                    <h5>PRICE</h5>
+                </div>
+                <div class="col-sm-6 col-8 text-center">
+                    <span>$ {{item.price}}</span>
+                </div>
+            </div>
+            <div class="row mt-4 d-flex align-items-center item_title">
+                <div class="col-sm-6 col-4">
+                    <h5>QUANTITY</h5>
+                </div>
+                <div class="col-sm-6 col-8 text-center">
+                    <div class="input ml-3">
+                        <button class="btn-fake btn left_ip" (click)="mark('-',item.id)" id="tru"><i
+                                class="fa-solid fa-minus"></i></button>
+                        <input type="text" value="{{item.quantity}}" id="quantity_768{{item.id}}">
+                        <button class="btn-fake btn right_ip" (click)="mark('+',item.id)" id="cong"><i
+                                class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 d-flex align-items-center item_title">
+                <div class="col-sm-6 col-4">
+                    <h5>TOTAL</h5>
+                </div>
+                <div class="col-sm-6 col-8 text-center">
+                    <span>$ {{item.totalEachitem}}</span>
+                </div>
+            </div>
+            <div class="remove mt-4">
+                <span (click)="removePro(item.id)"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container updateCart mt-5 mb-5 container_custom">
+        <div class="update">
+            <button (click)="removeAll()">UPDATE CART</button>
+        </div>
+        <div class="continue">
+            <button routerLink="/shop">CONTINUE SHOPPING</button>
+        </div>
+    </div>
+
+
+    <div class="container mb-5 container_custom">
+        <div class="end_cart">
+            <div class="cart_total mt-4">
+                <h5>CART TOTALS</h5>
+            </div>
+            <div class="mt-5">
+                <div class="d-flex align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-6 total">
+                        <h6>Total : </h6>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 total_price">
+                        <h6>$ {{total}}</h6>
+                    </div>
+                </div>
+                <div class="proceed mt-4">
+                    <button href="">PROCEED TO CHECKOUT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<app-footer></app-footer>
